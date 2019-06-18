@@ -1,6 +1,6 @@
 {
   "name": "example-commitizen-standard-version",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Example repository for commitizen and standard-version",
   "main": "src/index.js",
   "private": true,

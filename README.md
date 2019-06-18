@@ -26,7 +26,7 @@ When you're ready to release, execute the following commands in the given order:
 
 1. `git checkout master`
 2. `git pull origin master`
-3. `npm run release -- --no-verify`
+3. `npm run release -- --no-verify` (or `npx standard-version --no-verify`)
 4. `git push --follow-tags origin master`
 
 Now you are ready to publish the package with: `npm publish`

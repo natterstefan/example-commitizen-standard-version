@@ -1,0 +1,51 @@
+{
+  "name": "example-commitizen-standard-version",
+  "version": "0.0.1",
+  "description": "Example repository for commitizen and standard-version",
+  "main": "src/index.js",
+  "private": true,
+  "scripts": {
+    "prettier": "prettier --write ./src/**/*.js",
+    "release": "standard-version",
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git update-index --again"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "standard-version": {
+    "changelogHeader": "# Example Commitizen and Standard-Version\n\nAll notable changes to this project will be documented here. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).\n\n"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natterstefan/example-commitizen-standard-version"
+  },
+  "author": "Stefan Natter (https://natterstefan.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/natterstefan/example-commitizen-standard-version/issues"
+  },
+  "homepage": "https://github.com/natterstefan/example-commitizen-standard-version#readme",
+  "devDependencies": {
+    "commitizen": "^3.1.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "husky": "^2.4.1",
+    "lint-staged": "^8.2.1",
+    "prettier": "^1.18.2",
+    "standard-version": "^6.0.1"
+  }
+}

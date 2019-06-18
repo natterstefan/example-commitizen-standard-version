@@ -1,0 +1,7 @@
+# OS, IDE, ...
+.DS_Store
+.vscode
+
+# Development
+node_modules
+tmp

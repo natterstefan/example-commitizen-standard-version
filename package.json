@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "prettier": "prettier --write ./src/**/*.js",
-    "release": "standard-version",
+    "release": "HUSKY_SKIP_HOOKS=1 standard-version",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
